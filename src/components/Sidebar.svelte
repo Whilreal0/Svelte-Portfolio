@@ -16,7 +16,7 @@
       {/each}
     </ul>
   </div>
-  <div class="flex-end w-full  mt-40">
+  <div class="flex items-end justify-center w-full bg-red-300 h-full  mb-5">
     <ul class=" flex flex-col justify-center items-center gap-3">
       {#each navSocials as item}
         <li class="hover:scale-125  transition-transform duration-200 ease-in">
