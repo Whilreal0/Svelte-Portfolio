@@ -3,7 +3,7 @@
     <div class="flex flex-col gap-5">
         <h1 class="text-6xl font-bold md:text-6xl lg:text-8xl">Hello <br>Im Whilmer  </h1>
         <p class="text-xl text-gray-600 font-medium ">Front-End Developer</p>
-        <p class="">I build websites and apps for people. I enjoy deep dives into technical documentation and scratching my head until I solve JavaScript problems. When not at my computer, you can find me running 10milers around New Orleans.</p>
+        <p class="">I build websites and apps for people. I enjoy deep dives into technical documentation and scratching my head until I solve JavaScript problems. When not at my computer, you can find me running 10milers around Solar System.</p>
         <div class="flex gap-2 mt-5 mb-12 font-bold"> 
             <button class="custom-btn">Projects</button>
             <button class="custom-btn">Get in Touch</button>        

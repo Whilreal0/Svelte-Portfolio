@@ -33,24 +33,27 @@
   <button class="md:hidden flex {isOpen ? 'hidden' : 'flex'}" on:click={navOpen}>
     <iconify-icon class=" " icon="charm:menu-hamburger" height="30"  />
   </button>
+  <button class="items-end md:hidden flex {isOpen ? 'flex' : 'hidden'}" on:click={navOpen}>
+    <iconify-icon class=" " icon="f7:xmark" height="30"  />
+  </button>
 
   {#if isOpen}
     <!--  -->
     <a
       href="/#"
-      class="absolute md:hidden flex bg-black opacity-65 h-svh inset-0 {isOpen
+      class="absolute md:hidden flex bg-black opacity-65 h-[100vh] inset-0 mt-[60px] {isOpen
         ? 'flex'
         : 'hidden'} "
       on:click={navOpen}
     >
     </a>
     <!-- content here -->
-    <div class="bg-red-300 absolute md:hidden  gap-5 py-3 px-4 w-1/2 h-svh right-0 top-0">
-      <div class="bg-yellow-200 w-full flex items-start justify-end">
+    <div class="bg-red-300 absolute md:hidden  gap-5 py-3 px-4  w-full right-0 top-[60px]">
+      <!-- <div class="bg-yellow-200 w-full flex items-start justify-end">
         <button class="items-end md:hidden flex {isOpen ? 'flex' : 'hidden'}" on:click={navOpen}>
           <iconify-icon class=" " icon="f7:xmark" height="30"  />
         </button>
-      </div>
+      </div> -->
       <ul class="flex flex-col items-center">
         {#each navItems as item}
           <li><a href={item.link} on:click={closeMenu}>{item.name}</a></li>
