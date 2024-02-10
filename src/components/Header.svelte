@@ -1,9 +1,13 @@
 <script>
   import { onMount } from "svelte";
+  import { slide } from 'svelte/transition';
   export let y
   export let navItems;
   export let navSocials;
   let isOpen = false;
+  // 
+
+
 
   // for opening and closing nav
   let navOpen = () => {
@@ -46,7 +50,7 @@
 
   {#if isOpen}
     <!--  -->
-    <a
+    <a 
       href="/#"
       class="absolute md:hidden flex bg-black opacity-65 h-[100vh] inset-0 mt-[60px] {isOpen
         ? 'flex'
@@ -55,14 +59,9 @@
     >
     </a>
     <!-- content here -->
-    <div
-      class="bg-[#DDD0C8] absolute md:hidden gap-5 py-3 px-4 w-full right-0 top-[60px] flex flex-col items-center"
+    <div transition:slide={{ delay: .5, duration: 300 }}
+      class="bg-[#DDD0C8] absolute  md:hidden gap-5 py-3 px-4 w-full right-0 top-[60px] flex flex-col items-center"
     >
-      <!-- <div class="bg-yellow-200 w-full flex items-start justify-end">
-        <button class="items-end md:hidden flex {isOpen ? 'flex' : 'hidden'}" on:click={navOpen}>
-          <iconify-icon class=" " icon="f7:xmark" height="30"  />
-        </button>
-      </div> -->
       <ul class="text-center">
         {#each navItems as item}
           <li><a href={item.link} on:click={closeMenu}>{item.name}</a></li>
